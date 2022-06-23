@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Nutri Health</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="title">Amanda Nutritionist</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>My patients</h2>
+				<label for="filter-chart">Filtre:</label>
+				<input type="text" name="filter" id="filter-chart" placeholder="type patient's name">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Weight(kg)</th>
+							<th>Height(m)</th>
+							<th>Body Fat (%)</th>
+							<th>BMI</th>
+						</tr>
+					</thead>
+					<tbody id="chart-patients">
+						<tr class="patient" id="first-patient">
+							<td class="info-name">Paulo</td>
+							<td class="info-weight">100</td>
+							<td class="info-height">2.00</td>
+							<td class="info-fat">10</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient" >
+							<td class="info-name">João</td>
+							<td class="info-weight">80</td>
+							<td class="info-height">1.72</td>
+							<td class="info-fat">40</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient" >
+							<td class="info-name">Erica</td>
+							<td class="info-weight">54</td>
+							<td class="info-height">1.64</td>
+							<td class="info-fat">14</td>
+							<td class="info-bmi">0</td>
+						</tr>
+
+						<tr class="patient">
+							<td class="info-name">Douglas</td>
+							<td class="info-weight">85</td>
+							<td class="info-height">1.73</td>
+							<td class="info-fat">24</td>
+							<td class="info-bmi">0</td>
+						</tr>
+						<tr class="patient" >
+							<td class="info-name">Tatiana</td>
+							<td class="info-weight">46</td>
+							<td class="info-height">1.55</td>
+							<td class="info-fat">19</td>
+							<td class="info-bmi">0</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="error-ajax" class="invisible">Error when searching patients</span>
+
+				<button id="search-patient" class="button bto-main">Search Patient</button>
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Add new patient</h2>
+			<ul id="messages-error"></ul>
+		    <form id="form-add">
+		        <div class="">
+		            <label for="name">Name:</label>
+		            <input id="name" name="name" type="text" placeholder="type patient's name" class="field">
+		        </div>
+		        <div class="grupo">
+		            <label for="weight">Weight:</label>
+		            <input id="weight" name="weight" type="text" placeholder="type patient's weight" class="field field-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="height">Height:</label>
+		            <input id="height" name="height" type="text" placeholder="type patient's height" class="field field-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="fat">Fat %:</label>
+		            <input id="fat" type="text" placeholder="type patient's body fat percentage" class="field field-medio">
+		        </div>
+
+		        <button id="add-patient" class="button bto-main">Add</button>
+		    </form>
+		</section>
+
+		<script src="js/calculate-bmi.js" ></script>
+		<script src="js/form.js" ></script>
+		<script src="js/remove-patient.js" ></script>
+		<script src="js/filter.js" ></script>
+		<script src="js/search-patients.js" ></script>
+
+	</body>
+</html>
